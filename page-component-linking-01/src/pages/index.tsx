@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 
 function index() {
   return (
@@ -9,6 +9,13 @@ function index() {
       <Link to='/about'>About</Link>
       <br/>
       <Link to='/kamali'>Kamali</Link>
+      <br/>
+      {/* Link pages with button */}
+      <button onClick= {() => {
+        navigate('/about')
+      }}>
+        Navigate to About Page 
+      </button>
     </div>
   )
 }
