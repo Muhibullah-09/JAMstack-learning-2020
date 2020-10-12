@@ -14,9 +14,13 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
     "gatsby": "^2.24.67",
+    "gatsby-plugin-typescript": "^2.4.21",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "typescript": "^4.0.3"
   },
   "devDependencies": {
     "prettier": "2.1.2"
