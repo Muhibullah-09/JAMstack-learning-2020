@@ -14,9 +14,17 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "dotenv": "^8.2.0",
     "gatsby": "^2.24.67",
+    "gatsby-plugin-typescript": "^2.4.21",
+    "gatsby-source-contentful": "^2.3.52",
+    "moment": "^2.29.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "typescript": "^4.0.3"
   },
   "devDependencies": {
     "prettier": "2.1.2"
