@@ -5,17 +5,17 @@ require('dotenv').config();
 
 (async () =>{
 
-  if (process.env.FAUNADB_SERVER_SECRET) {
-    //console.log("Faunadb Server Secret: " + process.env.FAUNADB_SERVER_SECRET);
+  if (process.env.FAUNADB_ADMIN_SECRET) {
+    //console.log("Faunadb Server Secret: " + process.env.FAUNADB_ADMIN_SECRET);
 
-    var client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
+    var client = new faunadb.Client({ secret: process.env.FAUNADB_ADMIN_SECRET });
     
     //Create a document in the container of the database 
     try {
       var result = await client.query(
         q.Create(
           q.Collection('posts'),
-          { data: { title: 'Serverless applications are scalable' , Name: 'Matt Billmann' } },
+          { data: { title: 'Serverless applications are scalable' , content: 'Serverless is very important part of JAMstack' } },
         )
       );
       console.log("Document Created and Inserted in Container: " + result.ref.id);

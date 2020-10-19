@@ -5,10 +5,10 @@ require('dotenv').config();
 
 (async () =>{
 
-  if (process.env.FAUNADB_SERVER_SECRET) {
-    //console.log("Faunadb Server Secret: " + process.env.FAUNADB_SERVER_SECRET);
+  if (process.env.FAUNADB_ADMIN_SECRET) {
+    //console.log("Faunadb Server Secret: " + process.env.FAUNADB_ADMIN_SECRET);
 
-    var client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
+    var client = new faunadb.Client({ secret: process.env.FAUNADB_ADMIN_SECRET });
     
     //Create multiple documents in the container of the database 
     try {
@@ -23,7 +23,7 @@ require('dotenv').config();
             'title',
             q.Create(
               q.Collection('posts'),
-              { data: { title: q.Var('title') , name:'Muhibullah'} },
+              { data: { title: q.Var('title') , content:`${'title'} and important pillars of JAMstack` } },
             )
           ),
         )

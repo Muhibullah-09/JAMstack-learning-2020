@@ -5,10 +5,10 @@ require('dotenv').config();
 
 (async () =>{
 
-  if (process.env.FAUNADB_SERVER_SECRET) {
-    //console.log("Faunadb Server Secret: " + process.env.FAUNADB_SERVER_SECRET);
+  if (process.env.FAUNADB_ADMIN_SECRET) {
+    //console.log("Faunadb Admin Secret: " + process.env.FAUNADB_ADMIN_SECRET);
 
-    var client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
+    var client = new faunadb.Client({ secret: process.env.FAUNADB_ADMIN_SECRET });
     
     //Create a container in the database 
     try {

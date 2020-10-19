@@ -5,10 +5,10 @@ require('dotenv').config();
 
 (async () =>{
 
-  if (process.env.FAUNADB_SERVER_SECRET) {
-    //console.log("Faunadb Server Secret: " + process.env.FAUNADB_SERVER_SECRET);
+  if (process.env.FAUNADB_ADMIN_SECRET) {
+    //console.log("Faunadb Admin Secret: " + process.env.FAUNADB_ADMIN_SECRET);
 
-    var client = new faunadb.Client({ secret: process.env.FAUNADB_SERVER_SECRET });
+    var client = new faunadb.Client({ secret: process.env.FAUNADB_ADMIN_SECRET });
     
     //Create a index of the container in the database
     try {
@@ -16,7 +16,7 @@ require('dotenv').config();
         q.CreateIndex({
             name: 'posts_by_title',
             source: q.Collection('posts'),
-            terms: [{ field: ['data', 'title'] }],
+            terms: [{ field: ['data', 'title', 'content'] }],
           })
       );
       console.log("Index Created: " + result.name);
