@@ -1,0 +1,7 @@
+[build]
+  command = "yarn build"
+  publish = "public/"
+  functions = "functions/"
+
+[context.production]
+  environment = { MONGODB_CONNECTION_STRING = "mongodb+srv://Muheeb-09:090078601kafour@cluster-demo-bootcamp.lqtrt.mongodb.net/Demo?retryWrites=true&w=majority"}
